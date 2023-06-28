@@ -9,9 +9,10 @@ elementosComunes([4,5,6,7],[7,8,9,7,5])//devuelve [5,7]
 - Devolver array nuevo
 */
 function elementosComunes(array1,array2){
-  const filtrado = array.filter(elemento => {
-                   array2.includes(elemento)
+  const filtrado = array1.filter(elemento => {
+                   return array2.includes(elemento)
                    });
-console.log(filtrado)
+      return filtrado
 }
-elementosComunes([4,5,6,7],[7,8,9,7,5])
+console.log(elementosComunes([4,5,6,7],[7,8,9,7,5]));
+console.log(elementosComunes(["alma","eliza","chucho"],["alma","eliza"]));
