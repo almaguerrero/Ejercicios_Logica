@@ -10,3 +10,11 @@ Como hacerlo:
 - Recorrer el array y eliminar strings
 - Usar objeto para eliminar duplicados
 */
+function eliminarDuplicados(elementos){
+  elementos = elementos.filter(elemento =>{
+    return typeof elemento === "number"
+  }); //elimina strings
+  let sin_duplicados = new Set(elementos)
+  return Array.from(sin_duplicados)
+}
+console.log(eliminarDuplicados([1,2,1,1,1,3,4]))
